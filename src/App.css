@@ -1,38 +1,157 @@
+/* c:\Users\mansi shah\Desktop\dhanvi_postfolio\src\App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #e0e0e0;
+  background: #0a0a0a;
+  min-height: 100vh;
+}
+
 .App {
-  text-align: center;
+  min-height: 100vh;
+  background: #0a0a0a;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.section {
+  padding: 80px 0;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #64ffda;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(45deg, #64ffda, #00bcd4);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(45deg, #64ffda, #00bcd4);
+  color: #0a0a0a;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
+}
+
+/* Firefly boundary for profile photo */
+.image-container {
+  position: relative;
+}
+
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  right: -40px;
+  bottom: -40px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid transparent;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #64ffda, transparent),
+    radial-gradient(2px 2px at 40px 70px, #00ff88, transparent),
+    radial-gradient(1px 1px at 90px 40px, #64ffda, transparent),
+    radial-gradient(1px 1px at 60px 10px, #00ff88, transparent),
+    radial-gradient(2px 2px at 10px 80px, #64ffda, transparent),
+    radial-gradient(1px 1px at 80px 90px, #00ff88, transparent),
+    radial-gradient(2px 2px at 30px 100px, #64ffda, transparent),
+    radial-gradient(1px 1px at 100px 20px, #00ff88, transparent);
+  animation: firefliesFloat 8s ease-in-out infinite;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.image-container::after {
+  content: '';
+  position: absolute;
+  top: -35px;
+  left: -35px;
+  right: -35px;
+  bottom: -35px;
+  border-radius: 50%;
+  border: 1px solid rgba(100, 255, 218, 0.3);
+  box-shadow: 
+    0 0 20px rgba(100, 255, 218, 0.4),
+    inset 0 0 20px rgba(100, 255, 218, 0.2);
+  animation: firefliesBorder 6s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes firefliesFloat {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.8;
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: rotate(90deg) scale(1.05);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(180deg) scale(0.95);
+    opacity: 0.6;
+  }
+  75% {
+    transform: rotate(270deg) scale(1.02);
+    opacity: 0.9;
+  }
+}
+
+@keyframes firefliesBorder {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(100, 255, 218, 0.4),
+      inset 0 0 20px rgba(100, 255, 218, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 0 40px rgba(0, 255, 136, 0.6),
+      inset 0 0 30px rgba(0, 255, 136, 0.3);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section {
+    padding: 60px 0;
   }
 }

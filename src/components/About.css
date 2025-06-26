@@ -1,0 +1,289 @@
+/* src/components/About.css */
+.about {
+  background-color: #1a1a1a; /* Dark background */
+  color: #ffffff; /* White text for contrast */
+  padding: 80px 0;
+  min-height: 100vh;
+}
+
+.about .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+}
+
+.about h3 {
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.about-text {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.about-text p {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.achievements-section h3,
+.education-section h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.achievement-card {
+  background: #ffffff;
+  color: #333333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.achievement-card {
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  border: 1px solid #333333;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.achievement-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.achievement-card:hover {
+  transform: translateY(-10px);
+  border-color: #4a90e2;
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.2);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.achievement-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.achievement-card h4 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.achievement-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.achievement-card p {
+  color: #aaaaaa;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.education-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.education-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.education-card {
+  background: #ffffff;
+  color: #333333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.education-card {
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  border: 1px solid #333333;
+  border-radius: 15px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  border-color: linear-gradient(45deg, #64ffda, #00bcd4);
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.2);
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.education-card h4 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.year {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.year {
+  background: linear-gradient(45deg, #64ffda, #00bcd4);
+  color: #ffffff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.field {
+  font-size: 1.1rem;
+  color: #f0f0f0;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.field {
+  color: linear-gradient(45deg, #64ffda, #00bcd4);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.institution {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 10px;
+}
+
+.institution {
+  color: #cccccc;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.grade {
+  font-size: 1rem;
+  color: linear-gradient(45deg, #64ffda, #00bcd4);
+  font-weight: 600;
+  margin: 0;
+}
+
+.grade {
+  color: #aaaaaa;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 0;
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+  }
+  
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .education-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .achievement-card,
+  .education-card {
+    padding: 20px;
+  }
+  
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text p {
+    font-size: 1rem;
+  }
+  
+  .achievement-card h4 {
+    font-size: 1.2rem;
+  }
+  
+  .education-card h4 {
+    font-size: 1.2rem;
+  }
+}

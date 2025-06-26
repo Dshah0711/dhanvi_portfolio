@@ -1,0 +1,57 @@
+/* c:\Users\mansi shah\Desktop\dhanvi_postfolio\src\components\Footer.css */
+.footer {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: #64ffda;
+  padding: 2rem 0;
+  margin-top: auto;
+  border-top: 1px solid #2a2a2a;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(100, 255, 218, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(100, 255, 218, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 40% 80%, rgba(100, 255, 218, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+  animation: fireflies 4s ease-in-out infinite alternate;
+}
+
+@keyframes fireflies {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+}
+
+.footer-content p:first-child {
+  color: #64ffda;
+  font-weight: 500;
+}
