@@ -10,7 +10,7 @@ const Home = () => {
   const handleDownloadCV = () => {
     // Create a link element and trigger download
     const link = document.createElement('a');
-    link.href = '/resume_dhanvi (8).pdf'; // Updated to match your actual filename
+    link.href = '/resume_dhanvi_google.pdf'; // Updated to new filename
     link.download = 'Dhanvi_Resume.pdf';
     link.target = '_blank';
     document.body.appendChild(link);
