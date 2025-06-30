@@ -111,6 +111,94 @@
   width: 100%;
 }
 
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #64ffda;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  display: none;
+  width: 100%;
+  background: rgba(10, 10, 10, 0.98);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(100, 255, 218, 0.1);
+  overflow: hidden;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.mobile-nav-links li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.mobile-nav-links li:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav-links a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.mobile-nav-links a:hover {
+  color: #64ffda;
+  background: rgba(100, 255, 218, 0.1);
+  transform: translateX(10px);
+}
+
+.mobile-nav-links a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(45deg, #64ffda, #00bcd4);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.mobile-nav-links a:hover::before {
+  transform: scaleY(1);
+}
+
 @media (max-width: 768px) {
   .logo h2 {
     font-size: 1.5rem;
@@ -120,11 +208,34 @@
     font-size: 1.2rem;
   }
   
-  .nav-links {
-    gap: 1rem;
+  .desktop-nav {
+    display: none;
   }
   
-  .nav-links a {
-    font-size: 0.9rem;
+  .hamburger {
+    display: flex;
+  }
+  
+  .mobile-nav {
+    display: block;
+  }
+  
+  .nav {
+    padding: 0.75rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo h2 {
+    font-size: 1.3rem;
+  }
+  
+  .hamburger span {
+    width: 22px;
+    height: 2px;
+  }
+  
+  .mobile-nav-links a {
+    font-size: 1rem;
   }
 }
